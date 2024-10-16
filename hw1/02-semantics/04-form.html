@@ -12,42 +12,61 @@
       <h1>04 - Form</h1>
       <form>
         <h2>Create a new database</h2>
-        <div>Organization</div>
-        <input type="text" />
-        <div>Database name</div>
-        <input type="text" />
-        <div>
+        
+        <label for="Organization">Organization</label>
+        <input type="text" id="Organization" name="Organization" placeholder="Enter organization name"/>
+        <br>
+        <label for="Database">Database name</label>
+        <input type="text" id="Database" name="Database" placeholder="Enter database name"/>
+        
+
+        <!-- hard to style without css -->
+        <div> <small>
           Lowercase alphanumeric characters, dashes and underscores only
+        </small>
         </div>
-        <div>Region</div>
-        <input type="text" />
-        <div>
+
+
+        <label for="Region">Region</div>
+        <input type="text" id="Region" name="Region" placeholder="Enter region name"/>
+        <div> <small>
           For best performance, enter a region closest to your application
-        </div>
-        <div>
-          <div>Plan type</div>
-          <input type="radio" />
+        </div> </small>
+
+        <fieldset>
+          <legend>Plan type</legend>
+          
+          <input type="radio" id="basic" name="opt"/>
           <label for="basic">Basic</label>
-          <input type="radio" />
+
+          <input type="radio" id="business" name="opt"/>
           <label for="business">Business</label>
-          <input type="radio" />
+          
+          <input type="radio" id="pro" name="opt"/>
           <label for="pro">Pro</label>
-        </div>
-        <div>
-          <div>Included Fields</div>
-          <input type="checkbox" />
-          <label>Name</label>
-          <input type="checkbox" />
-          <label>Role</label>
-          <input type="checkbox" />
-          <label>Email</label>
-          <input type="checkbox" />
-          <label>Company Name</label>
-          <input type="checkbox" />
-          <label>Description</label>
-          <input type="checkbox" />
-          <label>Type</label>
-        </div>
+
+        </fieldset>
+        <fieldset>
+          <legend>Included Fields</legend>
+
+          <input type="checkbox" id="name" name="name"/>
+          <label for="name">Name</label>
+          <br>
+          <input type="checkbox" id="role" name="role"/>
+          <label for="role">Role</label>
+          <br>
+          <input type="checkbox" id="email" name="email"/>
+          <label for="email">Email</label>
+          <br>
+          <input type="checkbox" id="company_name" name="company_name"/>
+          <label for="company_name">Company Name</label>
+          <br>
+          <input type="checkbox" id="description" name="description"/>
+          <label for="description">Description</label>
+          <br>
+          <input type="checkbox" id="type" name="type"/>
+          <label for="type">Type</label>
+        </fieldset>
         <button>Create</button>
         <button>Reset</button>
       </form>
